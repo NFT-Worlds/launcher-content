@@ -17,11 +17,11 @@ Posts will be displayed in the order below:
 
 '''.format(num)
     first_post = 'Hello NFT Worlds!'
-    cmd('mkdir ' + left_pad(num))
-    f = open("./" + left_pad(num) + "/_index.md", "w")
+    cmd('mkdir worlds/' + left_pad(num))
+    f = open("./worlds/" + left_pad(num) + "/_index.md", "w")
     f.write(content)
     f.close()
-    f = open("./" + left_pad(num) + "/001-first.md", "w")
+    f = open("./worlds/" + left_pad(num) + "/001-first.md", "w")
     f.write(first_post)
     f.close()
 
@@ -30,4 +30,5 @@ end = 10000
 
 while c <= 10000:
     initialize_folder(c)
+    print(c)
     c += 1
